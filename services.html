@@ -64,7 +64,7 @@
 	color: white;
 	padding-top: 50px;
 	padding-bottom: 50px;
-	margin-top: 80px;
+	margin-top: 100px;
 	margin-bottom: 50px;
 	height: 700px;
 }
@@ -112,6 +112,13 @@
 
 <script type="text/javascript">
 
+var go = setInterval(function(){
+	$('.first-left').show('slide', {direction : 'left'}, 500);
+	$('.first-right').show('slide', {direction : 'left'}, 1000);
+	$('.second-left').show('slide', {direction : 'left'}, 1500);
+	$('.second-right').show('slide', {direction : 'left'}, 2000);
+}, 600);
+
 var service_sec_flag = 0;
 $('.service-sec').click(function(){
 	var this_var = $(this);
@@ -151,11 +158,6 @@ $('.service-sec').mouseleave(function(){
 	$(this).find("img").removeClass("shook-effect");
 });
 
-var go = setInterval(function(){
-	$('.first-left').show('slide', {direction : 'left'}, 500);
-	$('.first-right').show('slide', {direction : 'left'}, 1000);
-	$('.second-left').show('slide', {direction : 'left'}, 1500);
-	$('.second-right').show('slide', {direction : 'left'}, 2000);
-}, 600);
+
 
 </script>
