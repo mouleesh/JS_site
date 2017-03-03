@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html ng-app="example359">
+<head>
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+
+
+	<script src="js/jquery-2.0.3.min.js"></script>
+    	<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="js/angular.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+	<header ng-style="headerStyle">
+		  <nav class="navbar navbar-fixed-top">
+		    <div class="container-fluid">
+		      <div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+				  <span class="sr-only">Toggle navigation</span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"><img class="img-responsive" src="img/logo_white.png" alt="logo"></a>
+		      </div> 
+		      
+		      <div id="navbar" class="navbar-collapse collapse">
+				<ul style="margin-top:20px;" class="nav navbar-nav navbar-right">
+				  <li><a id="homeBtn" href="#!/" 		ng-class="{activeSmall:part == 'projects'}" 			ng-click="homeDisplayStyle={display:''};">Home</a></li>
+				  <li><a id="aboutBtn" href="#!/about" 		ng-class="{activeSmall:part == 'about'}" 			>About</a></li>
+				  <li><a id="ServicesBtn" href="#!/services" 	ng-class="{activeSmall:part == 'services'}" 			ng-click="homeDisplayStyle={display:'none'}">Services</a></li>
+				  <li><a id="worksBtn" href="#!/works" 		ng-class="{activeSmall:part == 'works'}" 			ng-click="homeDisplayStyle={display:'none'}">Our Works</a></li>
+				  
+				  <li><a id="privacyBtn" href="#!/privacy" 	ng-class="{activeSmall:part == 'privacy'}">Careers</a></li>
+				  <li style="margin-right:0px"><a id="contactBtn" class="active" href="javascript: void(0)" 			ng-click="showForm()">Contact Us</a></li>
+				</ul>
+		      </div>
+		    </div>
+		  </nav>
+		<div class="paddRow contactRow">
+		    <div class="row">
+				    <div class="wrap">
+					 <div class="head">Contact Us</div>
+					 <span ng-click="closeForm()" class="close glyphicon glyphicon-remove" aria-hidden="true"></span>
+		 			 <div class="col-xs-4">
+					    <h4>Technology Development Center</h4>
+					    <p> Address:
+						EMU Towers, 
+						# F2, No. 71, Velachery Main Road,
+						Rajakilpakkam, Chennai - 600073. 
+						(Near Kamarajapuram Bus stand Next to Woodberry furniture ) 
+						Telephone: 044-43516456
+						Email: info@jothisoftware.com</p>
+				    	 </div>
+					 <div class="col-xs-4 col-xs-offset-2">
+						<form ng-submit="save()" class="contactForm" name="form" ng-hide="loaded">
+						    <input class="input" required="required" type="text" name="name" placeholder="your name" ng-model="message.name" />
+						    <input class="input email" required="required" type="email" name="email" value="" placeholder="your email" ng-model="message.email" /><br />
+						    <textarea class="textarea" rows="5" required="required" placeholder="your message" ng-model="message.text" ></textarea>
+						    <button class="btn green">send message</button>
+						</form>
+						<div ng-show="process" style="text-align:center">
+						    <img class="loader" src="http://placeimg.com/100/100/any" />
+						</div>
+						<div ng-show="success"><p>Your message has been sent, thank you.</p></div>
+				         </div>
+			            </div>
+		    </div>
+		</div><!--contact us-->
+
+		<div class="container" >
+			<div class="row" style="margin-bottom:150px;margin-top:50px;">
+				<div class="col-sm-10 col-sm-offset-1 text-center">
+                    <div id="home-page-quote" >
+	                    <h1 style="font-size: 56px;line-height: 64px;font-weight:300;" class="">LET US BUILD A CUSTOM-</br>TAILORED SOLUTION FOR YOU!</h1>
+	                    <h6 class="">A GLOBAL NETWORK OF WORLD CLASS SOFTWARE DEVELOPMENT TEAMS.</h6>
+                    </div>
+				</div>
+			</div>
+			<!-- <div class="row" style="margin-bottom:150px;margin-top:50px;"> 
+			    <div class="text-center col-md-4">
+					<div class="class-with-pad">
+						<h2>Software Design</h2>
+					</div>
+			    </div>
+			    <div class="text-center col-md-4">
+					<div class="class-with-pad">
+						<h2>Software Development</h2>
+					</div>
+			    </div>
+			    <div class="text-center col-md-4">
+					<div class="class-with-pad">
+						<h2>Quality Analysis</h2>
+					</div>
+			    </div>
+			</div> -->
+		</div><!--container-->
+	</header>
+
+
+	<div class="page emptyDiv" style="width:100%" ng-view  ></div>
+
+<script>
+
+var $navbar = $('.navbar'),
+    fixmeTop = $navbar.offset().top;
+$(window).scroll(function () {
+    var currentScroll = $(window).scrollTop();
+    if(currentScroll == fixmeTop){
+		$navbar.removeClass('fixed-black');
+		// $navbar.removeClass('fixed');
+    }
+    else{
+		// $navbar.addClass('fixed');
+		$navbar.addClass('fixed-black');
+    }
+});
+
+$(window).scroll(function() {
+   var url    = $('.activeSmall').attr('id');
+   var scrTop = $(window).scrollTop();
+    
+   if(scrTop + $(window).height() == $(document).height()) {
+   		if (url == "homeBtn"){
+       		window.location = "#!/about"
+   		}
+   		else if (url == "aboutBtn") {
+   			window.location.href = "#!/services";
+   		}
+   		// else if (url == "ServicesBtn"){
+   		// 	window.location.href = "#!/works";
+   		// }
+   }
+});
+
+
+       
+
+        // if ( (topDistance+100) < scrollTop ) {
+        //     alert( $(this).text() + ' was scrolled to the top' );
+        // }
+
+
+</script>
+
+<style>
+.navbar.fixed {
+    position: fixed;
+    top: 0;
+    margin: auto;
+    background: white;
+    color: rgba(0,0,0,0.6);
+    padding: 10px;
+    height : 110px
+}
+
+.navbar.fixed li a {
+    color: rgba(0,0,0,0.6);
+}
+
+.navbar.fixed-black {
+    position: fixed;
+    top: 0;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.6);
+    color: rgba(0,0,0,0.6);
+    padding: 10px;
+    height : 110px
+}
+
+.navbar.fixed-black li a {
+    color: rgba(255,255,255,0.6);
+}
+
+.activeSmall{
+  background: #e68e37 !important;
+}
+
+</style>
+
+</body>
+</html>

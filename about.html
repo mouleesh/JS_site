@@ -1,0 +1,193 @@
+	<div id="scroll-to-about" style="background-color:#f5f7fa;color:#646d83;">
+		<div class="container" >
+			<div style="margin-top:110px;" class="row" >
+			<div style="background-color:#223a4a;padding:6rem;text-align:justify;color:#ffffff">
+			<h1 style="margin-top:100px;margin-left:50px;margi-right:50px;" align="center"> - Our Mission - </h1> <!--TODO: remove margins-->
+			<h3 align="center">To provide valuable services to our customers</h3>
+
+			<h4><strong>Company profile</strong></h4>
+			<p>Jothi Software Private Limited is a software development company providing software application development and consulting services to clients in India and USA. Using agile software development methodology and industry best practices in distributed software development, we collaborate with clients to accomplish their goal on time and under the budget.
+
+			With several years of On-Site consulting experience in the United States, we have insightful experience in all aspects of Software Development. This experience help us to understand our clients, their work culture and project requirements to build an extended team to suit their specific needs
+			<br/>
+			We strongly believe that Quality Assurance is an integral part of the development process and the planning for quality should start right from requirements. We follow agile development methodology and actively participate in sprint planning and review meetings. Our technical project Manager acts as a liaison between the client and the team and play the role of a customer proxy to fill the gap with respect to requirements and play the role of the coach to help team members fulfilling the technical requirements.
+
+			We provide technology solutions by means of product development, custom application software development, software maintenance and testing services. We are offering our services since 2011.</p>
+			</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row" align="center" style="background-color:#46c0b2;padding: 6rem;color:#ffffff">
+				<div >
+					<h1 style="margin-top:50px;" align="center"> Why Choose Us ?</h1> <!--TODO: remove margins-->
+					<h3 align="center"><b>We don’t just make websites.</b> We build targeted solutions that actually work, creating powerful user experiences that drive traffic, generate leads and ultimately, increase sales</h3>
+					<div class="row vertical-line">
+						<div class="col-xs-2" >
+							<img class="vertical-line"  src="img/vertical.png">
+							<div class="six-choice"> 
+								<h1>
+									<b>01</b>
+								</h1>
+								<br/>
+								<h4>Agile Software Development</h4>
+							</div>
+						</div>
+						<div class="col-xs-2" >
+							<img class="vertical-line" style="margin-top:100px;" src="img/vertical.png">
+							<div class="six-choice">
+								<h1>
+									<b>02</b>
+								</h1>
+								<br/>
+								<h4>Test Driven Development</h4>
+							</div>
+						</div>
+						<div class="col-xs-2" >
+							<img class="vertical-line"  src="img/vertical.png">
+							<div class="six-choice"> 
+								<h1>
+									<b>03</b>
+								</h1>
+								<br/>
+								<h4>Quality Assurance</h4>
+							</div>
+						</div>
+						<div class="col-xs-2" >
+							<img class="vertical-line" style="margin-top:100px;" src="img/vertical.png">
+							<div class="six-choice">
+								<h1>
+									<b>04</b>
+								</h1>
+								<br/>
+								<h4>Continous Integration</h4>
+							</div>
+						</div>
+						<div class="col-xs-2" >
+							<img class="vertical-line"  src="img/vertical.png">
+							<div class="six-choice">
+								<h1> 
+									<b>05</b> 
+								</h1>
+								<br/>
+								<h4>Timely Delivery</h4>
+							</div>
+						</div>
+						<div class="col-xs-2" >
+							<img class="vertical-line" style="margin-top:100px;" src="img/vertical.png">
+							<div class="six-choice">
+								<h1> 
+									<b>06</b>
+								</h1>
+								<br/>
+								<h4>Cost Effective Solution</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row" align="center" style="background-color:#f15756;padding: 6rem;color:#ffffff">
+				<div >
+					<h1 style="margin-top:50px;" align="center"> Leadership </h1> <!--TODO: remove margins-->
+					<div class="col-xs-6">
+						<img style="border-radius: 50%;" class="img-circle" src="http://placeimg.com/250/250/arch">
+						<h4>Raja Ramadass</h4>
+						<small>Founder & CEO</small>
+						<p style="text-align:justify;">Responsible for business development and technology management. He began his software development career in 1996 and has over 17 years of software development experience in Microsoft technologies. He has worked on software development projects involving various domains.</p>
+					</div>
+					<div class="col-xs-6">
+						<img style="border-radius: 50%;" class="img-circle" src="http://placeimg.com/250/250/arch">
+						<h4>Anitha R</h4>
+						<small>Director</small>
+						<p style="text-align:justify;">Anitha leads the daily operations at Jothi software, including product development and global sales. Anitha is passionate about people, sports, and really efficient processes.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+<script type="text/javascript">
+
+$(window).scroll(function() {
+   var scrTop = $(window).scrollTop();
+   
+   var topDistance = $('#scroll-to-about').offset().top;
+   if (scrTop < topDistance){
+   	window.location = "#!/"
+   }
+});
+
+
+</script>
+
+<style type="text/css">
+
+         
+ .vertical-line {
+ 	margin-left:50px;
+ 	margin-right:50px;
+ 	height: 400px;
+    -webkit-animation-duration: 1s;
+    		animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    		animation-fill-mode: both;
+    -webkit-animation-name: fadeInDown;
+            animation-name: fadeInDown;
+ }
+ 
+ @-webkit-keyframes fadeInDown {
+    0% {
+       opacity: 0;
+       -webkit-transform: translateY(-100px);
+    }
+    100% {
+       opacity: 1;
+       -webkit-transform: translateY(-100);
+    }
+ }
+ 
+ @keyframes fadeInDown {
+    0% {
+       opacity: 0;
+       transform: translateY(-40px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateY(0);
+    }
+ }
+
+ .six-choice {
+ 	-webkit-animation-duration: 1s;
+    		animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    		animation-fill-mode: both;
+    -webkit-animation-name: fadeInRight;
+            animation-name: fadeInRight;
+ }
+
+ @-webkit-keyframes fadeInRight {
+    0% {
+       opacity: 0;
+       -webkit-transform: translateX(-100px);
+    }
+    100% {
+       opacity: 1;
+       -webkit-transform: translateX(-100);
+    }
+ }
+ 
+ @keyframes fadeInRight {
+    0% {
+       opacity: 0;
+       transform: translateX(-40px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateX(0);
+    }
+ }
+
+</style>
