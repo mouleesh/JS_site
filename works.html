@@ -1,114 +1,255 @@
-<div id="scroll-to-work" >
-  <section >
-    <div  style="margin-bottom:200px;margin-top:110px;" class="row">
-      <div  class="col-xs-12" >
-        <h2 align="center">Our Projects</h2>
-      </div>
-    	<div ng-mouseenter="hoverInProject()" ng-mouseleave="hoverOutProject()" id="left-half-project-page" class="col-xs-6">
-    		<div >
-    			<div class="background-image" style="background-image: url(img/books.jpg);">
-    				<div ng-show="hoverClientEdit" class="left-image">
-    					<h1 class="foreground-content"> <b> Completed </b></h1>
-    					<!-- <img id="left-arrow" src="img/arrow_left.png"> -->
-    					<img class="foreground-image rotate-left" src="img/arrow-trans.png">
-    				</div>
-    			</div>
-    		</div>
-    	</div>
-    	<div ng-mouseenter="hoverInClient()" ng-mouseleave="hoverOutClient()" id="right-half-project-page" class="col-xs-6">
-    		<div >
-    			<div class="background-image" style="background-image: url(img/head_phone.jpg);">
-    				<div ng-show="hoverClientEdit" class="right-image">
-    					<h1 class="foreground-content"> <b> Ongoing </b></h1>
-    					<!-- <img id="right-arrow" src="img/arrow_right.png"> -->
-    					<img class="foreground-image rotate-right" src="img/arrow-trans.png">
-    				</div>
-    			</div>
-    		</div>
-    	</div>
+<head>
+</head>
+<div id="scroll-to-work" style="padding-top: 1%">
+    <div class="container">
+        <h1 style="text-align: center">Completed Projects</h1>
+        <dl class="gridtab-3">
+            <dt style="width: 40%;font-size: 18px"><b>Software Requirements Analysis & Design
+            </b></dt>
+            <dd>
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <img src="img/statistic-1.png" width="100%">
+                        </div>
+                        <div class="col-xs-8">
+                            <p class="content">The project is to gather requirements and propose a technical solution for interfacing Marketplace Management Sales Management System with a Marketplace API replacing existing functionality. The scope includes the following</p>
+                            <ul class="content-list">
+                                <li>Impact Analysis</li>
+                                <li>Collect functional and technical requirements
+                                </li>
+                                <li>Database Migration
+                                </li>
+                                <li>Functionality Migration on the marketplace
+                                </li>
+                                <li>Failover Strategy
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </dd>
+            <dt style="font-size: 18px"><b>Software Testing Projects</b></dt>
+            <dd>
+                <div class="col-xs-12">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <h4><b>UI Automation Test Framework
+                            </b></h4>
+                            <ul class="content-list">
+                                <li>Developed using AutoIt and used to test User Interface functionality of a Windows .Net application.</li>
+                                <li>Framework is equipped to restore a preset Sqlserver database or initialize the database from scratch to run the tests..</li>
+                                <li>Framework is designed in such a way that, it can be used in Acceptance tests written using Behavior Driven Development Tools (BDD) such as Ruby, Cucumber and Rspec..</li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-6">
+                            <h4><b>Acceptance Tests using BDD</b></h4>
+                            <ul class="content-list">
+                                <li>Acceptance tests are written using Behavior Driven Development Tools (BDD) such as Ruby, Cucumber and Rspec.</li>
+                                <li>Acceptance tests are written to test restful web services developed in Java.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </dd>
+        </dl>
+        <h1 style="text-align: center">Ongoing Projects</h1>
+        <dl class="gridtab-4">
+            <dt style="width: 40%;font-size: 18px"><b>Software Requirements Analysis & Design</b></dt>
+            <dd>
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <img src="img/static2.jpg" width="100%">
+                        </div>
+                        <div class="col-xs-8">
+                            <p class="content">The scope of the project is to</p>
+                            <ul class="content-list">
+                                <li>Gather requirements for an inventory management system through online /virtual meetings and perform needs analysis
+                                </li>
+                                <li>Understand the functionality of existing systems and the need for interfacing with the new system and define interface requirements
+                                </li>
+                                <li>Specify the functional and technical requirements through specification documents.
+                                </li>
+                                <li>Provide a technical solution in the form of architecture and design
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </dd>
+            <dt style="font-size: 18px;"><b>Development Projects</b></dt>
+            <dd>
+                <div class="col-xs-12">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h4><b>Online Marketplace Sales Management System
+                            </b></h4>
+                            <p class="content">The product is developed in .Net and uses SQLServer as the backend and interface with leading online marketplaces such as Amazon and eBay. Through the Web Services API exposed by the marketplaces, it manages the inventories of sellers across marketplaces located in US, UK, Canada, Germany and France. Apart from Marketplace Sales Management, the product integrates with shipping providers such as USPS, Fedex and UPS. The product is consistently enhanced with features to cater the needs of its customers and to adhere to the change in functionality and API of the marketplaces.<p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <h4><b>Agile Development Infrastructure
+                            </b></h4>
+                            <p class="content">This is an infrastructure project to cater the needs of the development and testing environments for various projects. Using Virtual Environment Software such as Vagrant and Oracle’s VM Virutual Box, development and testing environments are built dynamically with desired set of software.
+                            </p>
+                        </div>
+                        <div class="col-xs-6">
+                            <h4><b>Enterprise Application Integration Project
+                            </b></h4>
+                            <p class="content">The scope of the project is to develop an Inventory Management System using the LAMP stack (Linux, Apache, MySql and PHP) and interface with legacy systems via ESB (Enterprise Service Bus). Inventory Management System will be interfacing with the POS system running on AS/400 to synchronize inventory and price. Also the Inventory Management system will be interfaced with CRM systems running on Windows and Linux.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </dd>
+        </dl>
+        <br>
     </div>
-  </section>
+    <script src="js/gridtab.min.js"></script>
+    <br>
+    <div class="container marquee" style="background-color: #dc5e5e;">
+        <br>
+        <marquee behavior="scroll" direction="left">
+            <div class="row flip_container">
+                <div class="col-md-4">
+                    <div id="card">
+                        <div class="flip">
+                            <div class="front">
+                                <img src="img/IMG1.jpg" style="width: 80%">
+                            </div>
+                            <div class="back">
+                                <img src="img/IMG1.jpg" style="width: 80%">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="caption">
+                        <h4><b>Buyback</b></h4>
+                        <p>Content goes here..</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div id="card2">
+                        <div class="flip">
+                            <div class="front">
+                                <img src="img/IMG2.jpg" style="width: 80%">
+                            </div>
+                            <div class="back">
+                                <img src="img/IMG2.jpg" style="width: 80%">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="caption">
+                        <h4><b>BAM</b></h4>
+                        <p>Content goes here..</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div id="card3">
+                        <div class="flip">
 
-  <section class=""><!-- section-testimonial -->
-    <div style="margin-bottom:50px;" id="text-carousel" class="carousel slide" data-ride="carousel"> <!--TODO: remove margins-->
-        <div class="row">
-    	    <h1 align="center">Testimonials</h1>
-          <div class="col-xs-offset-3 col-xs-6">
-              <div class="carousel-inner">
-                  <div class="item active">
-                      <div class="carousel-content">
-                          <div>
-                              <p>It has been my pleasure to have worked with Raja over the last few years as Director of Software Engineering at Monsoon Commerce. Raja is a true team player with excellent and thorough testing instincts. His calm and even demeanor makes Raja easy to pair with other engineers. In fact, Raja is one of the most pleasant people I have had to work with in my career and I highly recommend him to anyone looking for a solid and dependable software engineer.</p>
-    		    <p align="center"><b>ANDREW MIGLIORE</b></p>
-    		     <p align="center"><small>Former Development Director, Monsoon Commerce.</small></p>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="item">
-                      <div class="carousel-content">
-                          <div>
-                              <p>I have been able to consistently count on the Jothi Software team to deliver high quality software components while smoothly aligning with our agile TDD process and distributed team. It is with pleasure that I give Jothi Software my highest recommendation.</p>
-    		    <p align="center"><b>PETER BOHNERT</b></p>
-    		    <p align="center"><small>Former SVP Engineering, Monsoon Commerce.</small></p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-        </div>
-        <!-- Controls --> <a class="left carousel-control" href="#text-carousel" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-      </a>
-      <a class="right carousel-control" href="#text-carousel" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right"></span>
-      </a>
+
+                            <div class="front">
+                                <img src="img/test.jpg" style="width: 85%;">
+                            </div>
+                            <div class="back">
+                                <img src="img/test.jpg" style="width: 85%;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="caption">
+                        <h4><b>AMS</b></h4>
+                        <p>Content goes here..</p>
+                    </div>
+                </div>
+            </div>
+        </marquee>
     </div>
-  </section>
 
-  <div style="margin-bottom:50px;margin-top:50px;" class="container">
-    <div style="height : 600px;overflow:hidden;" class="row">
-      
-      <div class="row">
-        <div style="padding:0px" class="col-xs-12">
-          <div style="height:200px;width:100%;background-color:#33cc99;" class="ripple">
-            <h1 class="techs" align="center">Tools and Frameworks</h1>
-              <img style="display:none;" class="zend_logo" src="img/zend.svg"/>
-          </div>
-        </div>
-      </div>
-      
-      <div class="row">
-        <div style="padding:0px" class="col-xs-8">
-          <div style="height:200px;width:100%;background-color:#33ffcc;" class="ripple">
-            <h1 class="techs" align="center">Languages</h1>
-          </div>
-        </div>
-        <div style="padding:0px" class="col-xs-4">
-          <div style="height:200px;width:100%;background-color:#66ffff;" class="ripple">
-            <h1 class="techs" align="center">Databases</h1>
-          </div>
-        </div>
-      </div>
 
-      <div class="row">
-        <div style="padding:0px" class="col-xs-4">
-          <div style="height:200px;width:100%;background-color:#99ccff;" class="ripple">
-            <h1 class="techs" align="center">Operating Systems</h1>
-          </div>
+    <!-- /Section: services -->
+
+    <section class=""><!-- section-testimonial -->
+        <div style="margin-bottom:50px;" id="text-carousel" class="carousel slide" data-ride="carousel"> <!--TODO: remove margins-->
+            <div class="row">
+                <h1 align="center">Testimonials</h1>
+                <div class="col-xs-offset-3 col-xs-6">
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <div class="carousel-content">
+                                <div>
+                                    <p>It has been my pleasure to have worked with Raja over the last few years as Director of Software Engineering at Monsoon Commerce. Raja is a true team player with excellent and thorough testing instincts. His calm and even demeanor makes Raja easy to pair with other engineers. In fact, Raja is one of the most pleasant people I have had to work with in my career and I highly recommend him to anyone looking for a solid and dependable software engineer.</p>
+                                    <p align="center"><b>ANDREW MIGLIORE</b></p>
+                                    <p align="center"><small>Former Development Director, Monsoon Commerce.</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="carousel-content">
+                                <div>
+                                    <p>I have been able to consistently count on the Jothi Software team to deliver high quality software components while smoothly aligning with our agile TDD process and distributed team. It is with pleasure that I give Jothi Software my highest recommendation.</p>
+                                    <p align="center"><b>PETER BOHNERT</b></p>
+                                    <p align="center"><small>Former SVP Engineering, Monsoon Commerce.</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Controls --> <a class="left carousel-control" href="#text-carousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#text-carousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
         </div>
-        <div style="padding:0px" class="col-xs-4">
-          <div style="height:200px;width:100%;background-color:#9999cc;" class="ripple">
-            <h1 class="techs" align="center">Virtual Environments</h1>
-          </div>
+    </section>
+
+    <div style="margin-bottom:50px;margin-top:50px;" class="container">
+        <div style="height : 600px;overflow:hidden;" class="row">
+
+            <div class="row">
+                <div style="padding:0px" class="col-xs-12">
+                    <div style="height:200px;width:100%;background-color:#33cc99;" class="ripple">
+                        <h1 class="techs" align="center">Tools and Frameworks</h1>
+                        <img style="display:none;" class="zend_logo" src="img/zend.svg"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div style="padding:0px" class="col-xs-8">
+                    <div style="height:200px;width:100%;background-color:#33ffcc;" class="ripple">
+                        <h1 class="techs" align="center">Languages</h1>
+                    </div>
+                </div>
+                <div style="padding:0px" class="col-xs-4">
+                    <div style="height:200px;width:100%;background-color:#66ffff;" class="ripple">
+                        <h1 class="techs" align="center">Databases</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div style="padding:0px" class="col-xs-4">
+                    <div style="height:200px;width:100%;background-color:#99ccff;" class="ripple">
+                        <h1 class="techs" align="center">Operating Systems</h1>
+                    </div>
+                </div>
+                <div style="padding:0px" class="col-xs-4">
+                    <div style="height:200px;width:100%;background-color:#9999cc;" class="ripple">
+                        <h1 class="techs" align="center">Virtual Environments</h1>
+                    </div>
+                </div>
+                <div style="padding:0px" class="col-xs-4">
+                    <div style="height:200px;width:100%;background-color:#99cc99;" class="ripple">
+                        <h1 class="techs" align="center">Source Control Systems</h1>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div style="padding:0px" class="col-xs-4">
-          <div style="height:200px;width:100%;background-color:#99cc99;" class="ripple">
-            <h1 class="techs" align="center">Source Control Systems</h1>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
 
 </div>
 
@@ -116,169 +257,188 @@
 
 
 <script type="text/javascript">
-$( document ).ready(function() {
-    
-  var state = true;
-  var pre_class;
-  
-  $(".ripple").on('click', function() {
-      $('.ripple').not(this).css('display', state ? 'none': '');
-      $(this).animate({ 'width' : state ? '100%' : '100%' }, 400);
-      var cur_class;
-      if(state){
-        cur_class = $(this).parent().attr('class');
-        $(this).parent().removeClass(cur_class);
-        $(this).parent().addClass('col-xs-12');
-        pre_class = cur_class;
-      }
-      else{
-        $(this).parent().removeClass('col-xs-12');
-        $(this).parent().addClass(pre_class);
-      }
-      $(".techs").css('display', state ? 'none' : '');
-      $(this).animate({ 'height' : state ? '600px' : '200px' }, state ? 400 : 0);
-      state = !state;
-  });
+    $( document ).ready(function() {
+
+        $("#card").flip();
+        $("#card2").flip();
+        $("#card3").flip();
+        var state = true;
+        var pre_class;
+
+        $('.gridtab-3').gridtab({
+            grid: 3,
+            config:{
+                layout:'tab',
+                activeTab:1,
+                showClose:true,
+                showArrows:true
+            }
+        });
+
+        $('.gridtab-4').gridtab({
+            grid: 4,
+            config:{
+                layout:'tab',
+                activeTab:2,
+                showClose:true,
+                showArrows:true
+            }
+        });
+
+        $('.gridtab__controls').remove();
+
+        $(".ripple").on('click', function() {
+            $('.ripple').not(this).css('display', state ? 'none': '');
+            $(this).animate({ 'width' : state ? '100%' : '100%' }, 400);
+            var cur_class;
+            if(state){
+                cur_class = $(this).parent().attr('class');
+                $(this).parent().removeClass(cur_class);
+                $(this).parent().addClass('col-xs-12');
+                pre_class = cur_class;
+            }
+            else{
+                $(this).parent().removeClass('col-xs-12');
+                $(this).parent().addClass(pre_class);
+            }
+            $(".techs").css('display', state ? 'none' : '');
+            $(this).animate({ 'height' : state ? '600px' : '200px' }, state ? 400 : 0);
+            state = !state;
+        });
 
 
-});
- 
+    });
 
-// $(window).scroll(function() {
-//    var scrTop = $(window).scrollTop();
-   
-//    var topDistance = $('#scroll-to-work').offset().top;
-//    // if (scrTop < topDistance){
-//    //  window.location = "#!/services"
-//    // }
-// });
+
+    $(window).scroll(function() {
+        var scrTop = $(window).scrollTop();
+
+        var topDistance = $('#scroll-to-work').offset().top;
+        // if (scrTop < topDistance){
+        //  window.location = "#!/services"
+        // }
+    });
 
 </script>
 
 <style>
 
 
-.section-testimonial {
-    padding: 0 0 20px;
-    background: #27e2de;
-    background: -moz-linear-gradient(left,#27e2de 0,#2974ef 100%);
-    background: -webkit-linear-gradient(left,#27e2de 0,#2974ef 100%); 
-    background: linear-gradient(to right,#27e2de 0,#2974ef 100%); 
-}
+    .section-testimonial {
+        padding: 0 0 20px;
+        background: #27e2de;
+        background: -moz-linear-gradient(left,#27e2de 0,#2974ef 100%);
+        background: -webkit-linear-gradient(left,#27e2de 0,#2974ef 100%);
+        background: linear-gradient(to right,#27e2de 0,#2974ef 100%);
+    }
 
 
-.zend_logo{
-  height: 20px;
-  width: 30px;
-}
+    .zend_logo{
+        height: 20px;
+        width: 30px;
+    }
 
-.techs{
-  margin-top: 95px;
-}
+    .techs{
+        margin-top: 95px;
+    }
 
-.ripple {
-  position: relative;
-  overflow: hidden;
-  float:left;
-}
-.ripple:after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  background-image: radial-gradient(circle, #000 10%, transparent 10.01%);
-  background-repeat: no-repeat;
-  background-position: 50%;
-  transform: scale(10, 10);
-  opacity: 0;
-  transition: transform .5s, opacity 1s;
-}
-.ripple:active:after{
-  transform: scale(0, 0);
-  opacity: .2;
-  transition: 0s;
-}
+    .ripple {
+        position: relative;
+        overflow: hidden;
+        float:left;
+    }
+    .ripple:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        background-image: radial-gradient(circle, #000 10%, transparent 10.01%);
+        background-repeat: no-repeat;
+        background-position: 50%;
+        transform: scale(10, 10);
+        opacity: 0;
+        transition: transform .5s, opacity 1s;
+    }
+    .ripple:active:after{
+        transform: scale(0, 0);
+        opacity: .2;
+        transition: 0s;
+    }
 
-
-.carousel-content{
-  height : 300px;
-}
-
-.carousel-control.left, .carousel-control.right {
-    background-image: none
-}
-
-/* style for proj and client */
+    .caption{
+        color: white;
+    }
 
 
-.background-image{
-  height : 500px;
-  width : 100%;
-  position: absolute;
-}
+    .carousel-content{
+        height : 300px;
+    }
 
-.left-image, .right-image {
-  background-color: #ffffff;
-}
+    .carousel-control.left, .carousel-control.right {
+        background-image: none
+    }
 
-.foreground-content{
-  position : absolute;
-  /*margin-top: 150px;*/
-  margin-left: 35%;
-  z-index : 2;
-  text-align: center;
-  color : #27e2de;
-  font-size : 350%;
-}
+    .content{
+        font-size: 18px;
+    }
 
-.foreground-image{
- /*width : 600px;
+    .content-list{
+        font-size: 18px;
+    }
 
- -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);*/
-  height : 500px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.3) 30%, #000 50%, rgba(0,0,0,.3) 70%);
-  -webkit-mask-size: 200%;
-  animation: shine 2s infinite;
-}
+    @-webkit-keyframes shine {
+        from {
+            -webkit-mask-position: 150%;
+        }
 
-@-webkit-keyframes shine {
-  from {
-    -webkit-mask-position: 150%;
-  }
-  
-  to {
-    -webkit-mask-position: -50%;
-  }
-}
+        to {
+            -webkit-mask-position: -50%;
+        }
+    }
 
-.rotate-left {
-  -ms-transform: rotate(270deg); /* IE 9 */
-  -webkit-transform: rotate(270deg); /* Chrome, Safari, Opera */
-  transform: rotate(270deg);
-}
+    .gridtab--0 >dt.is-active {
+        background-color: rgb(34, 58, 74);
+        color: white;
+    }
 
-.rotate-right{
-  -ms-transform: rotate(90deg); /* IE 9 */
-  -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
-  transform: rotate(90deg);
-}
+    .gridtab--1 >dt.is-active {
+        background-color: rgb(34, 58, 74);
+        color: white;
+    }
 
-
-#left-half-project-page{
-  height : 500px;
-
-}
-
-#right-half-project-page{
-  height : 500px;
-}
+    .flip:hover
+    {
+        -webkit-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+    }
+    .flip {
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        position: relative;
+    }
+    .front, .back {
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .front {
+        -webkit-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+    }
+    .back {
+        -webkit-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+    }
+    .marquee{
+        animation:scroll 10s linear infinite;
+    }
 
 </style>
