@@ -29,12 +29,12 @@
 		      
 		      <div id="navbar" class="navbar-collapse collapse">
 				<ul style="margin-top:20px;" class="nav navbar-nav navbar-right">
-				  <li><a id="homeBtn" href="#!/" 		ng-class="{activeSmall:part == 'projects'}" 			ng-click="homeDisplayStyle={display:''};">Home</a></li>
-				  <li><a id="aboutBtn" href="#!/about" 		ng-class="{activeSmall:part == 'about'}" 			>About</a></li>
-				  <li><a id="ServicesBtn" href="#!/services" 	ng-class="{activeSmall:part == 'services'}" 			ng-click="homeDisplayStyle={display:'none'}">Services</a></li>
-				  <li><a id="worksBtn" href="#!/works" 		ng-class="{activeSmall:part == 'works'}" 			ng-click="homeDisplayStyle={display:'none'}">Our Works</a></li>
+				  <li><a id="homeBtn" 		href="#!/" 			ng-class="{activeSmall:part == 'projects'}" 	>Home</a>	</li>
+				  <li><a id="aboutBtn" 		href="#!/about" 	ng-class="{activeSmall:part == 'about'}" 		>About</a>	</li>
+				  <li><a id="ServicesBtn" 	href="#!/services" 	ng-class="{activeSmall:part == 'services'}" 	>Services</a></li>
+				  <li><a id="worksBtn" 		href="#!/works" 	ng-class="{activeSmall:part == 'works'}" 		>Our Works</a></li>
 				  
-				  <li><a id="privacyBtn" href="#!/privacy" 	ng-class="{activeSmall:part == 'privacy'}">Careers</a></li>
+				  <li><a id="privacyBtn" 	href="#!/privacy" 	ng-class="{activeSmall:part == 'privacy'}"		>Careers</a></li>
 				  <li style="margin-right:0px"><a id="contactBtn" class="active" href="javascript: void(0)" 			ng-click="showForm()">Contact Us</a></li>
 				</ul>
 		      </div>
@@ -42,9 +42,9 @@
 		  </nav>
 		<div class="paddRow contactRow">
 		    <div class="row">
-				    <div class="wrap">
-					 <div class="head">Contact Us</div>
-					 <span ng-click="closeForm()" class="close glyphicon glyphicon-remove" aria-hidden="true"></span>
+			    <div class="wrap">
+					<div class="head">Contact Us</div>
+				 	<span ng-click="closeForm()" class="close glyphicon glyphicon-remove" aria-hidden="true"></span>
 		 			 <div class="col-xs-4">
 					    <h4>Technology Development Center</h4>
 					    <p> Address:
@@ -54,8 +54,8 @@
 						(Near Kamarajapuram Bus stand Next to Woodberry furniture ) 
 						Telephone: 044-43516456
 						Email: info@jothisoftware.com</p>
-				    	 </div>
-					 <div class="col-xs-4 col-xs-offset-2">
+			    	 </div>
+				 	<div class="col-xs-4 col-xs-offset-2">
 						<form ng-submit="save()" class="contactForm" name="form" ng-hide="loaded">
 						    <input class="input" required="required" type="text" name="name" placeholder="your name" ng-model="message.name" />
 						    <input class="input email" required="required" type="email" name="email" value="" placeholder="your email" ng-model="message.email" /><br />
@@ -66,8 +66,8 @@
 						    <img class="loader" src="http://placeimg.com/100/100/any" />
 						</div>
 						<div ng-show="success"><p>Your message has been sent, thank you.</p></div>
-				         </div>
-			            </div>
+			        </div>
+		        </div>
 		    </div>
 		</div><!--contact us-->
 
@@ -122,22 +122,20 @@ $(window).scroll(function () {
 $(window).scroll(function() {
    var url    = $('.activeSmall').attr('id');
    var scrTop = $(window).scrollTop();
-    
+
    if(scrTop + $(window).height() == $(document).height()) {
    		if (url == "homeBtn"){
-       		window.location = "#!/about"
+       		window.location = "#!/about";
    		}
    		else if (url == "aboutBtn") {
    			window.location.href = "#!/services";
    		}
-   		// else if (url == "ServicesBtn"){
-   		// 	window.location.href = "#!/works";
-   		// }
+   		else if (url == "ServicesBtn"){
+   			window.location.href = "#!/works";
+   		}
    }
+   
 });
-
-
-       
 
         // if ( (topDistance+100) < scrollTop ) {
         //     alert( $(this).text() + ' was scrolled to the top' );
@@ -159,6 +157,10 @@ $(window).scroll(function() {
 
 .navbar.fixed li a {
     color: rgba(0,0,0,0.6);
+}
+
+.navbar.fixed-black li a:hover {
+    color: #337ab7;
 }
 
 .navbar.fixed-black {
