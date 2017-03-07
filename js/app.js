@@ -10,15 +10,10 @@ var app = angular.module('example359', []).
       	  activetab: 'projects', 
       	  controller: 'HomeCtrl' 
       	}).
-        when('/project/:projectId', {
-          templateUrl: function (params) { return 'pages/' + params.projectId + '.html'; },
-          controller: 'ProjectCtrl',
-          activetab: 'projects'
-        }).
-        when('/privacy', {
-          templateUrl: 'pages/privacy.html',
-          controller: 'PrivacyCtrl',
-          activetab: 'privacy'
+        when('/career', {
+          templateUrl: 'career.html',
+          controller: 'CareerCtrl',
+          activetab: 'career'
         }).
         when('/services', {
           templateUrl: 'services.html',
@@ -69,16 +64,14 @@ app.controller("HomeCtrl", function ($scope) {
 
 });
 
-app.controller("ProjectCtrl", function ($scope) {
+app.controller("CareerCtrl",['$scope', '$location', '$anchorScroll', function ($scope, $location, $anchorScroll) {
+     $scope.$on('$viewContentLoaded', function() {
+        $location.hash('scroll-to-career');
+        $anchorScroll();
+     });
+}]);
 
-});
-
-app.controller("PrivacyCtrl", function ($scope) {
-
-});
-
-app.controller("ServicesCtrl", ['$scope', '$location', '$anchorScroll', function ($scope, $location, $anchorScroll) {
-     
+app.controller("ServicesCtrl", ['$scope', '$location', '$anchorScroll', function ($scope, $location, $anchorScroll) { 
      $scope.pageName = 'page-service';
      $('.emptyDiv').addClass("page-contact");
      $scope.$on('$viewContentLoaded', function() {

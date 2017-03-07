@@ -35,8 +35,8 @@
 				  <li><a id="aboutBtn" 		href="#!/about" 	ng-class="{activeSmall:part == 'about'}" 		>About</a>	</li>
 				  <li><a id="ServicesBtn" 	href="#!/services" 	ng-class="{activeSmall:part == 'services'}" 	>Services</a></li>
 				  <li><a id="worksBtn" 		href="#!/works" 	ng-class="{activeSmall:part == 'works'}" 		>Our Works</a></li>
+				  <li><a id="careerBtn" 	href="#!/career" 	ng-class="{activeSmall:part == 'privacy'}"		>Careers</a></li>
 
-				  <li><a id="privacyBtn" 	href="#!/privacy" 	ng-class="{activeSmall:part == 'privacy'}"		>Careers</a></li>
 				  <li style="margin-right:0px"><a id="contactBtn" class="active" href="javascript: void(0)" 			ng-click="showForm()">Contact Us</a></li>
 				</ul>
 		      </div>
@@ -44,26 +44,32 @@
 		  </nav>
 		<div class="paddRow contactRow">
 		    <div class="row">
-			    <div class="wrap">
-					<div class="head">Contact Us</div>
+			    <div >
 				 	<span ng-click="closeForm()" class="close glyphicon glyphicon-remove" aria-hidden="true"></span>
-		 			 <div class="col-xs-4">
-					    <h4>Technology Development Center</h4>
-					    <p> Address:
-						EMU Towers,
-						# F2, No. 71, Velachery Main Road,
-						Rajakilpakkam, Chennai - 600073.
-						(Near Kamarajapuram Bus stand Next to Woodberry furniture )
-						Telephone: 044-43516456
-						Email: info@jothisoftware.com</p>
-			    	 </div>
-				 	<div class="col-xs-4 col-xs-offset-2">
-						<form ng-submit="save()" class="contactForm" name="form" ng-hide="loaded">
-						    <input class="input" required="required" type="text" name="name" placeholder="your name" ng-model="message.name" />
-						    <input class="input email" required="required" type="email" name="email" value="" placeholder="your email" ng-model="message.email" /><br />
-						    <textarea class="textarea" rows="5" required="required" placeholder="your message" ng-model="message.text" ></textarea>
-						    <button class="btn green">send message</button>
-						</form>
+		 			<div class="col-xs-6">
+		 			 	<img style="max-width:100%;" src="https://maps.googleapis.com/maps/api/staticmap?center=12.923372,80.154010&zoom=18&size=1280x1280&scale=2&maptype=roadmap&key=AIzaSyCGv_0gQnBKk2_DUvy7EExuqJjl3nUTYw4">
+			    	</div>
+				 	<div class="col-xs-6" style="padding:0px;">
+				 		<div style="background-color:#f70c36; color:white;">
+					 		<h4><b>Technology Development Center</b></h4>
+						    <p> 
+								    Address:
+									EMU Towers,
+									# F2, No. 71, Velachery Main Road,
+									Rajakilpakkam, Chennai - 600073.
+									(Near Kamarajapuram Bus stand Next to Woodberry furniture )
+									Telephone: 044-43516456
+									Email: info@jothisoftware.com
+							</p>
+						</div>
+						<div class="wrap">
+							<form ng-submit="save()" class="contactForm" name="form" ng-hide="loaded">
+							    <input class="input" required="required" type="text" name="name" placeholder="your name" ng-model="message.name" />
+							    <input class="input email" required="required" type="email" name="email" value="" placeholder="your email" ng-model="message.email" /><br />
+							    <textarea class="textarea" rows="5" required="required" placeholder="your message" ng-model="message.text" ></textarea>
+							    <button class="btn green">send message</button>
+							</form>
+						</div>
 						<div ng-show="process" style="text-align:center">
 						    <img class="loader" src="http://placeimg.com/100/100/any" />
 						</div>
