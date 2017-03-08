@@ -36,8 +36,7 @@
 				  <li><a id="ServicesBtn" 	href="#!/services" 	ng-class="{activeSmall:part == 'services'}" 	>Services</a></li>
 				  <li><a id="worksBtn" 		href="#!/works" 	ng-class="{activeSmall:part == 'works'}" 		>Our Works</a></li>
 				  <li><a id="careerBtn" 	href="#!/career" 	ng-class="{activeSmall:part == 'career'}"		>Careers</a></li>
-
-				  <li style="margin-right:0px"><a id="contactBtn" class="active" href="javascript: void(0)" 			ng-click="showForm()">Contact Us</a></li>
+				  <li><a id="contactBtn" 	href="javascript: void(0)" 	ng-click="showForm()"					>Contact Us</a></li>
 				</ul>
 		      </div>
 		    </div>
@@ -50,20 +49,22 @@
 		 			 	<img style="max-width:100%;" src="https://maps.googleapis.com/maps/api/staticmap?center=12.923372,80.154010&zoom=19&size=1280x1280&scale=2&maptype=roadmap&key=AIzaSyCGv_0gQnBKk2_DUvy7EExuqJjl3nUTYw4">
 			    	</div>
 				 	<div class="col-xs-6" style="padding:0px;">
-				 		<div class="row" style="margin-right: 15%; margin-top:5%;">
-							<div class="col-xs-10 col-xs-offset-2" style="color:#8d8d8d;">
-						 		<h4>
-						 			<b>Technology Development Center</b>
-						 		</h4>
-							    <p> 
-									    Address:<br/>
-										EMU Towers,<br/>
-										# F2, No. 71, Velachery Main Road,<br/>
-										Rajakilpakkam, Chennai - 600073.<br/>
-										(Near Kamarajapuram Bus stand Next to Woodberry furniture )<br/>
-										Telephone: 044-43516456<br/>
-										Email: info@jothisoftware.com<br/>
-								</p>
+				 		<div style="background-color:#33ffff">
+					 		<div class="row" style="margin-right: 15%; margin-top:5%;">
+								<div class="col-xs-10 col-xs-offset-2" style="color:#ff6a00;">
+							 		<h4>
+							 			<b>Technology Development Center</b>
+							 		</h4>
+								    <p> 
+										    Address:<br/>
+											EMU Towers,<br/>
+											# F2, No. 71, Velachery Main Road,<br/>
+											Rajakilpakkam, Chennai - 600073.<br/>
+											(Near Kamarajapuram Bus stand Next to Woodberry furniture )<br/>
+											Telephone: 044-43516456<br/>
+											Email: info@jothisoftware.com<br/>
+									</p>
+								</div>
 							</div>
 						</div>
 						<br/>
@@ -134,8 +135,8 @@ $(window).scroll(function() {
    var url    = $('.activeSmall').attr('id');
    var scrTop = $(window).scrollTop();
    
-   console.log(scrTop);
-   console.log(url);
+   // console.log(scrTop);
+   // console.log(url);
 
    if(scrTop < 1035 && url == "aboutBtn"){
    		window.location = "#!";
