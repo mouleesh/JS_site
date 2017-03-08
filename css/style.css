@@ -57,24 +57,7 @@ input:focus,textarea:focus {
 .btn:hover {
   opacity:0.8;
 }
-.wrap {
-  -moz-box-sizing:border-box;
-  -webkit-box-sizing:border-box;
-  box-sizing:border-box;
-  margin:0 auto;
-  max-width:1420px;
-  overflow:hidden;
-  padding:0 50px;
-  position:relative;
-  width:100%;
-}
-.wrap:before {
-  content:'';
-  display:inline-block;
-  height:100%;
-  margin-right:-0.25em;
-  vertical-align:middle;
-}
+
 
 /* footer section */
 footer .copyright {
@@ -88,7 +71,6 @@ footer .copyright {
 
 .paddRow {
   background-color:#dadada;
-  color:#818181;
   display:none;
   padding-bottom:40px;
   position:fixed;

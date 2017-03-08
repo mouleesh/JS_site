@@ -35,7 +35,7 @@
 				  <li><a id="aboutBtn" 		href="#!/about" 	ng-class="{activeSmall:part == 'about'}" 		>About</a>	</li>
 				  <li><a id="ServicesBtn" 	href="#!/services" 	ng-class="{activeSmall:part == 'services'}" 	>Services</a></li>
 				  <li><a id="worksBtn" 		href="#!/works" 	ng-class="{activeSmall:part == 'works'}" 		>Our Works</a></li>
-				  <li><a id="careerBtn" 	href="#!/career" 	ng-class="{activeSmall:part == 'privacy'}"		>Careers</a></li>
+				  <li><a id="careerBtn" 	href="#!/career" 	ng-class="{activeSmall:part == 'career'}"		>Careers</a></li>
 
 				  <li style="margin-right:0px"><a id="contactBtn" class="active" href="javascript: void(0)" 			ng-click="showForm()">Contact Us</a></li>
 				</ul>
@@ -46,34 +46,37 @@
 		    <div class="row">
 			    <div >
 				 	<span ng-click="closeForm()" class="close glyphicon glyphicon-remove" aria-hidden="true"></span>
-		 			<div class="col-xs-6">
-		 			 	<img style="max-width:100%;" src="https://maps.googleapis.com/maps/api/staticmap?center=12.923372,80.154010&zoom=18&size=1280x1280&scale=2&maptype=roadmap&key=AIzaSyCGv_0gQnBKk2_DUvy7EExuqJjl3nUTYw4">
+		 			<div class="col-xs-6" style="padding-right:0px;">
+		 			 	<img style="max-width:100%;" src="https://maps.googleapis.com/maps/api/staticmap?center=12.923372,80.154010&zoom=19&size=1280x1280&scale=2&maptype=roadmap&key=AIzaSyCGv_0gQnBKk2_DUvy7EExuqJjl3nUTYw4">
 			    	</div>
 				 	<div class="col-xs-6" style="padding:0px;">
-				 		<div style="background-color:#f70c36; color:white;">
-					 		<h4><b>Technology Development Center</b></h4>
-						    <p> 
-								    Address:
-									EMU Towers,
-									# F2, No. 71, Velachery Main Road,
-									Rajakilpakkam, Chennai - 600073.
-									(Near Kamarajapuram Bus stand Next to Woodberry furniture )
-									Telephone: 044-43516456
-									Email: info@jothisoftware.com
-							</p>
+				 		<div class="row" style="margin-right: 15%; margin-top:5%;">
+							<div class="col-xs-10 col-xs-offset-2" style="color:#8d8d8d;">
+						 		<h4>
+						 			<b>Technology Development Center</b>
+						 		</h4>
+							    <p> 
+									    Address:<br/>
+										EMU Towers,<br/>
+										# F2, No. 71, Velachery Main Road,<br/>
+										Rajakilpakkam, Chennai - 600073.<br/>
+										(Near Kamarajapuram Bus stand Next to Woodberry furniture )<br/>
+										Telephone: 044-43516456<br/>
+										Email: info@jothisoftware.com<br/>
+								</p>
+							</div>
 						</div>
-						<div class="wrap">
-							<form ng-submit="save()" class="contactForm" name="form" ng-hide="loaded">
-							    <input class="input" required="required" type="text" name="name" placeholder="your name" ng-model="message.name" />
-							    <input class="input email" required="required" type="email" name="email" value="" placeholder="your email" ng-model="message.email" /><br />
-							    <textarea class="textarea" rows="5" required="required" placeholder="your message" ng-model="message.text" ></textarea>
-							    <button class="btn green">send message</button>
-							</form>
+						<br/>
+						<div class="row" style="margin-right: 15%; margin-top:10%;">
+							<div class="col-xs-10 col-xs-offset-2">
+								<form ng-submit="save()" class="contactForm" name="form" ng-hide="loaded">
+								    <input class="input" required="required" type="text" name="name" placeholder="your name" ng-model="message.name" />
+								    <input class="input email" required="required" type="email" name="email" value="" placeholder="your email" ng-model="message.email" /><br />
+								    <textarea class="textarea" rows="5" required="required" placeholder="your message" ng-model="message.text" ></textarea>
+								    <button class="btn green">send message</button>
+								</form>
+							</div>
 						</div>
-						<div ng-show="process" style="text-align:center">
-						    <img class="loader" src="http://placeimg.com/100/100/any" />
-						</div>
-						<div ng-show="success"><p>Your message has been sent, thank you.</p></div>
 			        </div>
 		        </div>
 		    </div>
@@ -83,8 +86,8 @@
 			<div class="row" style="margin-bottom:150px;margin-top:50px;">
 				<div class="col-sm-10 col-sm-offset-1 text-center">
                     <div id="home-page-quote" >
-	                    <h1 style="font-size: 56px;line-height: 64px;font-weight:300;" class="">LET US BUILD A CUSTOM-</br>TAILORED SOLUTION FOR YOU!</h1>
-	                    <h6 class="">A GLOBAL NETWORK OF WORLD CLASS SOFTWARE DEVELOPMENT TEAMS.</h6>
+	                    <h1 id="typing-quote" style="font-size: 56px;line-height: 64px;font-weight:300;" class="">LET US BUILD A CUSTOM-</h1>
+	                    	<h1 id="typing-quote-line-2" style="font-size: 56px;line-height: 64px;font-weight:300;">TAILORED SOLUTION FOR YOU! <span class="cursor">|</span> </h1>
                     </div>
 				</div>
 			</div>
@@ -130,6 +133,16 @@ $(window).scroll(function () {
 $(window).scroll(function() {
    var url    = $('.activeSmall').attr('id');
    var scrTop = $(window).scrollTop();
+   
+   console.log(scrTop);
+   console.log(url);
+
+   if(scrTop < 1035 && url == "aboutBtn"){
+   		window.location = "#!";
+   }
+   else if(scrTop < 1035 && url == "ServicesBtn"){
+   		window.location = "#!/about";
+   }
 
    if(scrTop + $(window).height() == $(document).height()) {
    		if (url == "homeBtn"){
@@ -144,11 +157,6 @@ $(window).scroll(function() {
    }
 
 });
-
-        // if ( (topDistance+100) < scrollTop ) {
-        //     alert( $(this).text() + ' was scrolled to the top' );
-        // }
-
 
 </script>
 
@@ -167,8 +175,16 @@ $(window).scroll(function() {
     color: rgba(0,0,0,0.6);
 }
 
-.navbar.fixed-black li a:hover {
-    color: #337ab7;
+.navbar-fixed-top li a:hover{
+	color: #e68e37;
+}
+
+.navbar.fixed-black li a:hover{
+	color: #e68e37;
+}
+
+.navbar.fixed-black li a {
+    color: white;
 }
 
 .navbar.fixed-black {
@@ -181,12 +197,40 @@ $(window).scroll(function() {
     height : 110px
 }
 
-.navbar.fixed-black li a {
-    color: rgba(255,255,255,0.6);
-}
-
 .activeSmall{
   background: #e68e37 !important;
+}
+
+#typing-quote{
+  white-space: nowrap;
+  overflow: hidden;
+  width: 840px;
+  animation: type 2s steps(60, end); 
+}
+
+#typing-quote-line-2{
+  white-space: nowrap;
+  overflow: hidden;
+  width: 900px;
+  animation: type2 4s steps(60, end);
+}
+
+.cursor{
+  animation: blink 1s infinite;
+}
+
+@keyframes type{ 
+  from { width: 0; } 
+} 
+
+@keyframes type2{
+  0%{width: 0;}
+  50%{width: 0;}
+  100%{ width: 100; } 
+}
+
+@keyframes blink{
+  to{opacity: .0;}
 }
 
 </style>
