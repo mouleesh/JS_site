@@ -90,18 +90,21 @@
 			<div class="row" align="center" style="background-color:#f15756;padding: 6rem;color:#ffffff">
 				<div >
 					<h1 style="margin-top:50px;" align="center"> Leadership </h1> <!--TODO: remove margins-->
-					<div class="col-xs-6">
-						<img style="border-radius: 50%;" class="img-circle" src="http://placeimg.com/250/250/arch">
+					<div class="col-xs-12">
+						<img style="border-radius: 50%;" class="img-circle" src="img/founder.jpg">
 						<h4>Raja Ramadass</h4>
 						<small>Founder & CEO</small>
-						<p style="text-align:justify;">Responsible for business development and technology management. He began his software development career in 1996 and has over 17 years of software development experience in Microsoft technologies. He has worked on software development projects involving various domains.</p>
+						<p style="text-align:justify; margin-left:20%; margin-right:20%;">Responsible for business development and technology management. He began his software development career in 1996 and has over 17 years of software development experience in Microsoft technologies. He has worked on software development projects involving various domains.<br/><br/>
+						He has several years of onsite consulting experience in the United States and throughout his career, actively involved in various parts of software development.<br /><br/>
+						Raja received his Masters degree in Mathematics from University of Madras, India and received MS Software Engineering from Portland State University, Oregon, USA.
+						</p>
 					</div>
-					<div class="col-xs-6">
-						<img style="border-radius: 50%;" class="img-circle" src="http://placeimg.com/250/250/arch">
+					<!-- <div class="col-xs-6">
+						<img style="border-radius: 50%;" class="img-circle" src="">
 						<h4>Anitha R</h4>
 						<small>Director</small>
 						<p style="text-align:justify;">Anitha leads the daily operations at Jothi software, including product development and global sales. Anitha is passionate about people, sports, and really efficient processes.</p>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
@@ -109,8 +112,6 @@
 
 
 <script type="text/javascript">
-
-$(".nav li a").not(".activeSmall").blur()
 
 $.fn.isInViewport = function() {
 
@@ -130,7 +131,6 @@ $.fn.isInViewport = function() {
 
 $(window).scroll(function() {
 	if ($('.choose-container').isInViewport()) {
-   		console.log('display content')
    		$(".vertical-line").show();
    		$(".six-choice").show();
 	}   

@@ -65,10 +65,11 @@ app.controller("HomeCtrl", function ($scope) {
 });
 
 app.controller("CareerCtrl",['$scope', '$location', '$anchorScroll', function ($scope, $location, $anchorScroll) {
-     $scope.$on('$viewContentLoaded', function() {
-        $location.hash('scroll-to-career');
-        $anchorScroll();
-     });
+    $scope.$on('$viewContentLoaded', function() {
+       $location.hash('scroll-to-career');
+       $anchorScroll();
+    });
+    $(".nav li a").not(".activeSmall").blur()
 }]);
 
 app.controller("ServicesCtrl", ['$scope', '$location', '$anchorScroll', function ($scope, $location, $anchorScroll) { 
@@ -78,6 +79,7 @@ app.controller("ServicesCtrl", ['$scope', '$location', '$anchorScroll', function
         $location.hash('scroll-to-service');
         $anchorScroll();
      });
+     $(".nav li a").not(".activeSmall").blur()
 }]);
 
 app.controller("AboutCtrl", ['$scope', '$location', '$anchorScroll', function ($scope, $location, $anchorScroll) {
@@ -86,6 +88,7 @@ app.controller("AboutCtrl", ['$scope', '$location', '$anchorScroll', function ($
         $anchorScroll();
      });
       $('.emptyDiv').addClass("page-about");
+      $(".nav li a").not(".activeSmall").blur()
 }]);
 
 app.controller("WorksCtrl",  ['$scope', '$location', '$anchorScroll', function ($scope, $location, $anchorScroll) {
@@ -94,6 +97,8 @@ app.controller("WorksCtrl",  ['$scope', '$location', '$anchorScroll', function (
         $location.hash('scroll-to-work');
         $anchorScroll();
     });
+
+    $(".nav li a").not(".activeSmall").blur()
 
     $scope.hoverProjectEdit = true;
     $scope.hoverClientEdit = true;

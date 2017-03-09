@@ -1,9 +1,18 @@
+::selection {
+  background: #e68e37;
+}
+
+::-moz-selection {
+  background: #e68e37;
+}
+
 html {
   min-height:100%;
   overflow-x:hidden;
   overflow-y:scroll;
   width:100%;
 }
+
 body {
   background-color:#e6e6e6;
   color:#FFF;
@@ -24,6 +33,7 @@ h1 {
 }
 p {
   font-size:1.5em;
+  font-family: 'Josefin Slab', serif;
 }
 input,textarea {
   -webkit-appearance:none;
@@ -262,7 +272,7 @@ header li a {
 }
 
 header {
-    background-image: url("../img/cover10.jpg");/* try.gif*/
+    background-image: url("../img/cover10.gif");/* try.gif*/
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
