@@ -136,7 +136,8 @@ $(window).scroll(function () {
 $(window).scroll(function() {
    var url    = $('.activeSmall').attr('id');
    var scrTop = $(window).scrollTop();
-   
+   var scrollPoint = 950;
+
    // console.log(scrTop);
    // console.log(url);
 
@@ -146,6 +147,9 @@ $(window).scroll(function() {
    // else if(scrTop < 950 && url == "ServicesBtn"){
    // 		window.location = "#!/about";
    // }
+    if (url != "homeBtn") {
+        scrTop < scrollPoint ? $(window).scrollTop(scrollPoint) : '';
+	}
 
   /* if(scrTop + $(window).height() == $(document).height()) {
    		if (url == "homeBtn"){
