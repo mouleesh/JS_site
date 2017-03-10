@@ -17,13 +17,13 @@
 			</div>
 		</div>
 		<div class="container choose-container">
-			<div class="row" align="center" style="height:1000px;background-color:#46c0b2;padding: 6rem;color:#ffffff">
+			<div class="row why-choose-row" align="center" >
 				<div >
 					<h1 style="margin-top:50px;" align="center"> Why Choose Us ?</h1> <!--TODO: remove margins-->
 					<h3 align="center"><b>We don’t just make websites.</b> We build targeted solutions that actually work, creating powerful user experiences that drive traffic, generate leads and ultimately, increase sales</h3>
 					<div class="row vertical-line">
-						<div class="col-xs-2" >
-							<img class="vertical-line"  src="img/vertical.png">
+						<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2" >
+							<img class="vertical-line v-line"  src="img/vertical.png">
 							<div class="six-choice"> 
 								<h1>
 									<b>01</b>
@@ -32,8 +32,8 @@
 								<h4>Agile Software Development</h4>
 							</div>
 						</div>
-						<div class="col-xs-2" >
-							<img class="vertical-line" style="margin-top:100px;" src="img/vertical.png">
+						<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2" >
+							<img class="vertical-line v-line" style="margin-top:100px;" src="img/vertical.png">
 							<div class="six-choice">
 								<h1>
 									<b>02</b>
@@ -42,8 +42,8 @@
 								<h4>Test Driven Development</h4>
 							</div>
 						</div>
-						<div class="col-xs-2" >
-							<img class="vertical-line"  src="img/vertical.png">
+						<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2" >
+							<img class="vertical-line v-line"  src="img/vertical.png">
 							<div class="six-choice"> 
 								<h1>
 									<b>03</b>
@@ -52,8 +52,8 @@
 								<h4>Quality Assurance</h4>
 							</div>
 						</div>
-						<div class="col-xs-2" >
-							<img class="vertical-line" style="margin-top:100px;" src="img/vertical.png">
+						<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2" >
+							<img class="vertical-line v-line" style="margin-top:100px;" src="img/vertical.png">
 							<div class="six-choice">
 								<h1>
 									<b>04</b>
@@ -62,8 +62,8 @@
 								<h4>Continous Integration</h4>
 							</div>
 						</div>
-						<div class="col-xs-2" >
-							<img class="vertical-line"  src="img/vertical.png">
+						<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2" >
+							<img class="vertical-line v-line"  src="img/vertical.png">
 							<div class="six-choice">
 								<h1> 
 									<b>05</b> 
@@ -72,8 +72,8 @@
 								<h4>Timely Delivery</h4>
 							</div>
 						</div>
-						<div class="col-xs-2" >
-							<img class="vertical-line" style="margin-top:100px;" src="img/vertical.png">
+						<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2" >
+							<img class="vertical-line v-line" style="margin-top:100px;" src="img/vertical.png">
 							<div class="six-choice">
 								<h1> 
 									<b>06</b>
@@ -94,7 +94,7 @@
 						<img style="border-radius: 50%;" class="img-circle" src="img/founder.jpg">
 						<h4>Raja Ramadass</h4>
 						<small>Founder & CEO</small>
-						<p style="text-align:justify; margin-left:20%; margin-right:20%;">Responsible for business development and technology management. He began his software development career in 1996 and has over 17 years of software development experience in Microsoft technologies. He has worked on software development projects involving various domains.<br/><br/>
+						<p class="about-founder-text">Responsible for business development and technology management. He began his software development career in 1996 and has over 17 years of software development experience in Microsoft technologies. He has worked on software development projects involving various domains.<br/><br/>
 						He has several years of onsite consulting experience in the United States and throughout his career, actively involved in various parts of software development.<br /><br/>
 						Raja received his Masters degree in Mathematics from University of Madras, India and received MS Software Engineering from Portland State University, Oregon, USA.
 						</p>
@@ -140,6 +140,18 @@ $(window).scroll(function() {
 
 <style type="text/css">
 
+  .about-founder-text{
+	text-align:justify; 
+	margin-left:20%; 
+	margin-right:20%;	
+  }
+
+  .why-choose-row{
+  	height:1000px;
+  	background-color:#46c0b2;
+  	padding: 6rem;
+  	color:#ffffff
+  }
          
  .vertical-line {
  	display: none;
@@ -207,5 +219,53 @@ $(window).scroll(function() {
        transform: translateX(0);
     }
  }
+
+@media (max-width: 1200px){
+	.v-line{
+		display: none !important;
+	}
+	.why-choose-row{
+  		height:550px;
+  	}
+}
+
+@media (max-width: 900px) {
+	.v-line{
+		display: none !important;
+	}
+	.about-founder-text{
+		margin-left:10%; 
+		margin-right:10%;	
+	}
+	.why-choose-row{
+  		height:1150px;
+  	}
+}
+
+@media (max-width: 768px) {
+	.v-line{
+		display: none !important;
+	}
+	.about-founder-text{
+		margin-left:5%; 
+		margin-right:5%;	
+	}
+	.why-choose-row{
+  		height:1150px;
+  	}
+}
+
+@media (max-width: 480px) {
+	.v-line{
+		display: none !important;
+	}
+	.about-founder-text{
+		margin-left:5%; 
+		margin-right:5%;	
+	}
+	.why-choose-row{
+  		height:1250px;
+  	}
+}
 
 </style>

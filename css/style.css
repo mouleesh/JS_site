@@ -252,14 +252,6 @@ header li a {
 
 /* Custom */
 
-#home-page-quote {
-  margin-top:30%;
-  margin-bottom: 30%;
-  text-align: center; 
-  color: #fff;
-  font-size:300%;
-}
-
 .class-with-pad {
   height: 350px; 
   background-color: rgba(0, 0, 0, 0.6);
@@ -272,7 +264,7 @@ header li a {
 }
 
 header {
-    background-image: url("../img/cover10.gif");/* try.gif*/
+    background-image: url("../img/cover10_orange.gif");/* try.gif*/
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

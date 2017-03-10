@@ -113,7 +113,7 @@
 
     <section class=""><!-- section-testimonial -->
         <div style="margin-bottom:50px;" id="text-carousel" class="carousel slide" data-ride="carousel"> <!--TODO: remove margins-->
-            <div class="row">
+            <div class="row testimonial-row">
                 <h1 align="center">Testimonials</h1>
                 <div class="col-xs-offset-3 col-xs-6">
                     <div class="carousel-inner">
@@ -139,17 +139,17 @@
                     </div>
                 </div>
             </div>
-            <!-- Controls --> <a class="left carousel-control" href="#text-carousel" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
+            <a class="left carousel-control" href="#text-carousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" style="color:#000000"></span>
             </a>
             <a class="right carousel-control" href="#text-carousel" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="glyphicon glyphicon-chevron-right" style="color:#000000"></span>
             </a>
         </div>
     </section>
 
     <div style="margin-bottom:50px;margin-top:50px;" class="container">
-        <div style="height : 600px;overflow:hidden;" class="row">
+        <div style="height:600px;overflow:hidden;" class="row">
 
             <div class="row">
                 <div style="padding:0px" class="col-xs-12">
@@ -412,6 +412,17 @@
         fill: #fff;
         pointer-events: none;
         vertical-align: top;
+    }
+
+    .testimonial-row{
+        background: -moz-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(128,128,128,1) 100%);
+        background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(128,128,128,1)));
+        background: -webkit-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(128,128,128,1) 100%);
+        background: -o-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(128,128,128,1) 100%);
+        background: -ms-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(128,128,128,1) 100%);
+        background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(128,128,128,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#808080', endColorstr='#FFFFFF',GradientType=1 );
+        color:#000000
     }
 
 
