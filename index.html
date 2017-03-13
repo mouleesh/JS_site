@@ -48,28 +48,56 @@
 		    <div class="row">
 			    <div >
 				 	<span ng-click="closeForm()" class="close glyphicon glyphicon-remove" aria-hidden="true"></span>
-		 			<div class="col-xs-6" style="padding-right:0px;">
-		 			 	<img style="max-width:100%;" src="https://maps.googleapis.com/maps/api/staticmap?center=12.923372,80.154010&zoom=19&size=1280x1280&scale=2&maptype=roadmap&key=AIzaSyCGv_0gQnBKk2_DUvy7EExuqJjl3nUTYw4">
-			    	</div>
-				 	<div class="col-xs-6" style="padding:0px;">
-					 		<div class="row" style="margin-right: 15%; margin-top:5%;">
-								<div class="col-xs-10 col-xs-offset-2 " style="color:#ff6a00;">
-							 		<h4>
-							 			<b class="addressh4">Technology Development Center</b>
-							 		</h4>
-								    <p class="addressp"> 
-										    Address:<br/>
-											EMU Towers,<br/>
-											# F2, No. 71, Velachery Main Road,<br/>
-											Rajakilpakkam, Chennai - 600073.<br/>
-											(Near Kamarajapuram Bus stand Next to Woodberry furniture )<br/>
-											Telephone: 044-43516456<br/>
-											Email: info@jothisoftware.com<br/>
-									</p>
+				 	<div class='contact-large'>
+			 			<div class="col-xs-6 map" style="padding-right:0px;">
+			 			 	<img style="max-width:100%;" src="https://maps.googleapis.com/maps/api/staticmap?center=12.923372,80.154010&zoom=19&size=1280x1280&scale=2&maptype=roadmap&key=AIzaSyCGv_0gQnBKk2_DUvy7EExuqJjl3nUTYw4">
+				    	</div>
+					 	<div class="col-xs-6" style="padding:0px;">
+						 		<div class="row" style="margin-right: 15%; margin-top:5%;">
+									<div class="col-xs-10 col-xs-offset-2 " style="color:#ff6a00;">
+								 		<h4>
+								 			<b class="addressh4">Technology Development Center</b>
+								 		</h4>
+									    <p class="addressp"> 
+											    Address:<br/>
+												EMU Towers,<br/>
+												# F2, No. 71, Velachery Main Road,<br/>
+												Rajakilpakkam, Chennai - 600073.<br/>
+												(Near Kamarajapuram Bus stand Next to Woodberry furniture )<br/>
+												Telephone: 044-43516456<br/>
+												Email: info@jothisoftware.com<br/>
+										</p>
+									</div>
+								</div>
+							<br/>
+							<div class="row" style="margin-right: 15%; margin-top:10%;">
+								<div class="col-xs-10 col-xs-offset-2">
+									<form ng-submit="save()" class="contactForm" name="form" ng-hide="loaded">
+									    <input class="input" required="required" type="text" name="name" placeholder="your name" ng-model="message.name" />
+									    <input class="input email" required="required" type="email" name="email" value="" placeholder="your email" ng-model="message.email" /><br />
+									    <textarea class="textarea" rows="5" required="required" placeholder="your message" ng-model="message.text" ></textarea>
+									    <button  style="text-align:center;background-color:#e68e37;color:white;" class="btn btn-lg green">send message</button>
+									</form>
 								</div>
 							</div>
-						<br/>
-						<div class="row" style="margin-right: 15%; margin-top:10%;">
+				        </div>
+				    </div>
+				    <div class='contact-small' style="display:none;">
+				    	<div class="row" style="margin-right: 15%; margin-top:5%;">
+							<div class="col-xs-6" style="color:#ff6a00;">
+						 		<h4>
+						 			<b class="addressh4">Technology Development Center</b>
+						 		</h4>
+							    <p class="addressp"> 
+									    Address:<br/>
+										EMU Towers,<br/>
+										# F2, No. 71, Velachery Main Road,<br/>
+										Rajakilpakkam, Chennai - 600073.<br/>
+										(Near Kamarajapuram Bus stand Next to Woodberry furniture )<br/>
+										Telephone: 044-43516456<br/>
+										Email: info@jothisoftware.com<br/>
+								</p>
+							</div>
 							<div class="col-xs-10 col-xs-offset-2">
 								<form ng-submit="save()" class="contactForm" name="form" ng-hide="loaded">
 								    <input class="input" required="required" type="text" name="name" placeholder="your name" ng-model="message.name" />
@@ -79,7 +107,7 @@
 								</form>
 							</div>
 						</div>
-			        </div>
+				    </div>
 		        </div>
 		    </div>
 		</div><!--contact us-->
@@ -333,6 +361,12 @@ $(window).scroll(function() {
 		line-height: 32px;
 		font-weight:150;
 	}
+	.contact-large{
+		display: none;
+	}
+	.contact-small{
+		display: block;
+	}
 }
 
 @media (max-width: 480px) {
@@ -357,7 +391,7 @@ $(window).scroll(function() {
 	margin-top: -9%;
 }
 
-@media (max-width: 400px){
+@media (max-width: 380px){
 	.fixed-black .org-logo{
 		margin-top: -18%;
 	}
