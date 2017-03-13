@@ -23,13 +23,13 @@
 		  <nav class="navbar navbar-fixed-top">
 		    <div class="container-fluid">
 		      <div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+				<button style="margin-top:20px;" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
 				  <span class="sr-only">Toggle navigation</span>
 				  <span class="icon-bar"></span>
 				  <span class="icon-bar"></span>
 				  <span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#"><img class="img-responsive" src="img/logo_white.png" alt="logo"></a>
+				<a class="navbar-brand" href="#"><img class="img-responsive org-logo" src="img/logo_white.png" alt="logo"></a>
 		      </div>
 
 		      <div id="navbar" class="navbar-collapse collapse">
@@ -88,8 +88,8 @@
 			<div class="row" style="margin-bottom:150px;margin-top:50px;">
 				<div class="col-sm-10 col-sm-offset-1 text-center">
                     <div id="home-page-quote" >
-	                    <h1 id="typing-quote" style="font-size: 56px;line-height: 64px;font-weight:300;" class="">LET US BUILD A CUSTOM-</h1>
-	                    	<h1 id="typing-quote-line-2" style="font-size: 56px;line-height: 64px;font-weight:300;">TAILORED SOLUTION FOR YOU! <span class="cursor">|</span> </h1>
+	                    <h1 id="typing-quote">LET US BUILD A CUSTOM-</h1>
+	                    <h1 id="typing-quote-line-2" >TAILORED SOLUTION FOR YOU! <span class="cursor">|</span> </h1>
                     </div>
 				</div>
 			</div>
@@ -136,16 +136,20 @@ $(window).scroll(function () {
 $(window).scroll(function() {
    var url    = $('.activeSmall').attr('id');
    var scrTop = $(window).scrollTop();
-   
+   var scrollPoint = 950;
+
    // console.log(scrTop);
    // console.log(url);
 
-   if(scrTop < 950 && url == "aboutBtn"){
-   		window.location = "#!";
-   }
-   else if(scrTop < 950 && url == "ServicesBtn"){
-   		window.location = "#!/about";
-   }
+   // if(scrTop < 950 && url == "aboutBtn"){
+   // 		window.location = "#!";
+   // }
+   // else if(scrTop < 950 && url == "ServicesBtn"){
+   // 		window.location = "#!/about";
+   // }
+    if (url != "homeBtn") {
+        scrTop < scrollPoint ? $(window).scrollTop(scrollPoint) : '';
+	}
 
   /* if(scrTop + $(window).height() == $(document).height()) {
    		if (url == "homeBtn"){
@@ -168,13 +172,11 @@ $(window).scroll(function() {
 
 <style>
 
-.addressh4::selection{
-	color: white;
+.icon-bar{
+	background-color: white;
 }
 
-.addressp::selection{
-	color: white;
-}
+/*Styling for navbar*/
 
 .navbar.fixed {
     position: fixed;
@@ -209,7 +211,7 @@ $(window).scroll(function() {
     background: rgba(0, 0, 0, 0.6);
     color: rgba(0,0,0,0.6);
     padding: 10px;
-    height : 110px
+    /*height : 110px*/
 }
 
 .activeSmall{
@@ -220,7 +222,30 @@ $(window).scroll(function() {
 	color: #ffffff !important;
 }
 
+/*Styling for contact selection*/
+
+.addressh4::selection{
+	color: white;
+}
+
+.addressp::selection{
+	color: white;
+}
+
+/*Styling for Home page quote*/
+
+#home-page-quote {
+  margin-top:30%;
+  margin-bottom: 30%;
+  text-align: center; 
+  color: #fff;
+  font-size:300%;
+}
+
 #typing-quote{
+  font-size: 56px;
+  line-height: 64px;
+  font-weight:300;
   white-space: nowrap;
   overflow: hidden;
   width: 840px;
@@ -228,6 +253,9 @@ $(window).scroll(function() {
 }
 
 #typing-quote-line-2{
+  font-size: 56px;
+  line-height: 64px;
+  font-weight:300;
   white-space: nowrap;
   overflow: hidden;
   width: 900px;
@@ -285,11 +313,55 @@ $(window).scroll(function() {
 	color: #f39c12;
 }
 
-	.fa-3x{
-		font-size: 50px;
+.fa-3x{
+	font-size: 40px;
+}
+
+/*Style for media screens*/
+
+@media (max-width: 768px) {
+	#home-page-quote{
+		margin-left: -30%;
+	}
+    #typing-quote-line-2 {
+		font-size: 28px;
+		line-height: 32px;
+		font-weight:150;
+	}
+	#typing-quote {
+		font-size: 28px;
+		line-height: 32px;
+		font-weight:150;
+	}
+}
+
+@media (max-width: 480px) {
+	#home-page-quote{
+		margin-left: -50%;
 	}
 
+    #typing-quote-line-2 {
+		font-size: 28px;
+		line-height: 32px;
+		font-weight:150;
+	}
 
+	#typing-quote {
+		font-size: 28px;
+		line-height: 32px;
+		font-weight:150;
+	}
+}
+
+.fixed-black .org-logo{
+	margin-top: -9%;
+}
+
+@media (max-width: 400px){
+	.fixed-black .org-logo{
+		margin-top: -18%;
+	}
+}
 
 </style>
 
