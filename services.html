@@ -1,4 +1,4 @@
-<div  id="scroll-to-service" class="section" style="margin-top:110px;">
+<div  id="scroll-to-service" class="section">
 	<div class="container">
 			<div class="row service-row" >
 				<div style="margin-top:15%;">
@@ -89,13 +89,13 @@
 
 .section{
 	/*background-image: url(img/service_back.jpg);*/
-	
+
 	color: white;
 	/*padding-top: 50px;*/
 	padding-bottom: 50px;
 /*	margin-top: 100px;*/
 	margin-bottom: 50px;
-	
+
 }
 
 .service-sec{
@@ -175,6 +175,9 @@
 	.service-row{
 		height: 900px;
 	}
+	.emptyDiv{
+		padding-top: 130px;
+	}
 }
 
 @media (max-width: 380px){
@@ -207,9 +210,9 @@ $('.service-sec').click(function(){
 			$(this).find(".dynamic-col img").hide();
 		}
 		$(".dynamic-col").addClass("col-xs-2");
-		setTimeout(function(){
+//		setTimeout(function(){
 		  $(".dynamic-col-2").show();
-		}, 2000);
+//		}, 2000);
 		service_sec_flag = 1;
 	}
 	else{

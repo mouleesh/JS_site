@@ -3,7 +3,8 @@
 
 // angular.js main app initialization
 var app = angular.module('example359', []).
-    config(['$routeProvider', function ($routeProvider) {
+    config(['$routeProvider','$locationProvider', function ($routeProvider, $locationProvider ) {
+    $locationProvider.html5Mode(true);
       $routeProvider.
         when('/', { 
       	  templateUrl: 'main.html', 
@@ -65,43 +66,47 @@ app.controller("HomeCtrl", function ($scope) {
 });
 
 app.controller("CareerCtrl",['$scope', '$location', '$anchorScroll', function ($scope, $location, $anchorScroll) {
-    $scope.$on('$viewContentLoaded', function() {
-       $location.hash('scroll-to-career');
-       $anchorScroll();
-    });
+
     $(".nav li a").not(".activeSmall").blur()
 }]);
 
 app.controller("ServicesCtrl", ['$scope', '$location', '$anchorScroll', function ($scope, $location, $anchorScroll) { 
      $scope.pageName = 'page-service';
      $('.emptyDiv').addClass("page-contact");
-     $scope.$on('$viewContentLoaded', function() {
-        $location.hash('scroll-to-service');
-        $anchorScroll();
-     });
      $(".nav li a").not(".activeSmall").blur()
+    var url = $location.hash();
+    $location.hash('scroll-to-service');
+    $anchorScroll();
+    $location.hash(url);
 }]);
 
 app.controller("AboutCtrl", ['$scope', '$location', '$anchorScroll', function ($scope, $location, $anchorScroll) {
-     $scope.$on('$viewContentLoaded', function() {
-        $location.hash('scroll-to-about');
-        $anchorScroll();
-     });
-      $('.emptyDiv').addClass("page-about");
-      $(".nav li a").not(".activeSmall").blur()
+    var url = $location.hash();
+    $location.hash('scroll-to-about');
+    $anchorScroll();
+    $location.hash(url);
+
+    $scope.scrollToTop = function($var) {
+        // 'html, body' denotes the html element, to go to any other custom element, use '#elementID'
+        $('html, body').animate({
+            scrollTop: 0
+        }, 3000); // 'fast' is for fast animation
+    };
 }]);
 
 app.controller("WorksCtrl",  ['$scope', '$location', '$anchorScroll', function ($scope, $location, $anchorScroll) {
-    
-    $scope.$on('$viewContentLoaded', function() {
-        $location.hash('scroll-to-work');
-        $anchorScroll();
-    });
 
     $(".nav li a").not(".activeSmall").blur()
 
     $scope.hoverProjectEdit = true;
     $scope.hoverClientEdit = true;
+
+    $scope.scrollToTop = function($var) {
+        // 'html, body' denotes the html element, to go to any other custom element, use '#elementID'
+        $('html, body').animate({
+            scrollTop: 0
+        }, 3000); // 'fast' is for fast animation
+    };
 
     $scope.hoverInProject = function(){
 

@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
 	<link rel="stylesheet" href="css/gridtab.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Slab:600" rel="stylesheet">
-	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
 	<script src="js/jquery-2.0.3.min.js"></script>
     	<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script src="js/angular.min.js"></script>
 	<script src="js/app.js"></script>
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<base href="/">
 
 
 </head>
@@ -34,11 +35,11 @@
 
 		      <div id="navbar" class="navbar-collapse collapse">
 				<ul style="margin-top:20px;" class="nav navbar-nav navbar-right">
-				  <li><a id="homeBtn" 		href="#!/" 			ng-class="{activeSmall:part == 'projects'}" 	>Home</a>	</li>
-				  <li><a id="aboutBtn" 		href="#!/about" 	ng-class="{activeSmall:part == 'about'}" 		>About</a>	</li>
-				  <li><a id="ServicesBtn" 	href="#!/services" 	ng-class="{activeSmall:part == 'services'}" 	>Services</a></li>
-				  <li><a id="worksBtn" 		href="#!/works" 	ng-class="{activeSmall:part == 'works'}" 		>Our Works</a></li>
-				  <li><a id="careerBtn" 	href="#!/career" 	ng-class="{activeSmall:part == 'career'}"		>Careers</a></li>
+				  <li><a id="homeBtn" 		href="/" 			ng-class="{activeSmall:part == 'projects'}" 	>Home</a>	</li>
+				  <li><a id="aboutBtn" 		href="/about" 	ng-class="{activeSmall:part == 'about'}" 		>About</a>	</li>
+				  <li><a id="ServicesBtn" 	href="/services" 	ng-class="{activeSmall:part == 'services'}" 	>Services</a></li>
+				  <li><a id="worksBtn" 		href="/works" 	ng-class="{activeSmall:part == 'works'}" 		>Our Works</a></li>
+				  <li><a id="careerBtn" 	href="/career" 	ng-class="{activeSmall:part == 'career'}"		>Careers</a></li>
 				  <li><a id="contactBtn" 	href="javascript: void(0)" 	ng-click="showForm()"					>Contact Us</a></li>
 				</ul>
 		      </div>
@@ -112,7 +113,7 @@
 		    </div>
 		</div><!--contact us-->
 
-		<div class="container" >
+		<div class="container" id="home-image">
 			<div class="row" style="margin-bottom:150px;margin-top:50px;">
 				<div class="col-sm-10 col-sm-offset-1 text-center">
                     <div id="home-page-quote" >
@@ -141,9 +142,8 @@
 		</div><!--container-->
 	</header>
 
-
 	<div class="page emptyDiv" style="width:100%" ng-view  ></div>
-	<div ng-include src="'footer.html'" style="padding-top: 2%"></div>
+	<div ng-include src="'footer.html'"></div>
 
 <script>
 
@@ -179,21 +179,32 @@ $(window).scroll(function() {
         scrTop < scrollPoint ? $(window).scrollTop(scrollPoint) : '';
 	}
 
-  /* if(scrTop + $(window).height() == $(document).height()) {
-   		if (url == "homeBtn"){
-       		window.location = "#!/about";
-   		}
-   		else if (url == "aboutBtn") {
-   			window.location.href = "#!/services";
-   		}
-   		else if (url == "ServicesBtn"){
-   			window.location.href = "#!/works";
-   		}
-   		else if (url == "worksBtn") {
-   			window.location.href = "#!/career";
-   		}
-   }*/
+	if ($(this).scrollTop() > 100) {
+		$('.goToTop').fadeIn();
+	} else {
+		$('.goToTop').fadeOut();
+	}
 
+//  /* if(scrTop + $(window).height() == $(document).height()) {
+//   		if (url == "homeBtn"){
+//       		window.location = "#!/about";
+//   		}
+//   		else if (url == "aboutBtn") {
+//   			window.location.href = "#!/services";
+//   		}
+//   		else if (url == "ServicesBtn"){
+//   			window.location.href = "#!/works";
+//   		}
+//   		else if (url == "worksBtn") {
+//   			window.location.href = "#!/career";
+//   		}
+//   }*/
+
+});
+
+$('.goToTop').click(function () {
+	$("html, body").animate({ scrollTop: 0 }, 1000);
+	return false;
 });
 
 </script>
@@ -238,7 +249,7 @@ $(window).scroll(function() {
     margin: auto;
     background: rgba(0, 0, 0, 0.6);
     color: rgba(0,0,0,0.6);
-    padding: 10px;
+    padding: 6px;
     /*height : 110px*/
 }
 
@@ -367,6 +378,10 @@ $(window).scroll(function() {
 	.contact-small{
 		display: block;
 	}
+	.top-row{
+		padding-top: 170px;
+	}
+
 }
 
 @media (max-width: 480px) {
@@ -385,6 +400,9 @@ $(window).scroll(function() {
 		line-height: 32px;
 		font-weight:150;
 	}
+	.emptyDiv{
+		padding-top: 130px;
+	}
 }
 
 .fixed-black .org-logo{
@@ -395,6 +413,21 @@ $(window).scroll(function() {
 	.fixed-black .org-logo{
 		margin-top: -18%;
 	}
+}
+
+.goToTop
+{
+	position: fixed;
+	width: 100px;
+	height: 40px;
+	bottom: 0;
+	right: 0;
+	z-index: 100000;
+	cursor: pointer;
+	margin: 10px;
+	-moz-opacity: 0.60;
+	opacity: .60;
+	filter: alpha(opacity=60);
 }
 
 </style>
