@@ -55,6 +55,24 @@ var app = angular.module('example359', []).
               $scope.process = false;
           });
         };
+
+    $scope.scrollToTop = function($var) {
+        // 'html, body' denotes the html element, to go to any other custom element, use '#elementID'
+        $('html, body').animate({
+            scrollTop: 0
+        }, 3000); // 'fast' is for fast animation
+    };
+    $('.navbar-toggle').click(function(){
+        $('#navbar').toggle("slow");
+    });
+        $('.nav').click(function(){
+            if (window.matchMedia('(max-width: 767px)').matches) {
+                $('#navbar').hide();
+            }else{
+                $('#navbar').show();
+            }
+        });
+
   }]);
 
 app.config(['$locationProvider', function($location) {
@@ -85,6 +103,8 @@ app.controller("AboutCtrl", ['$scope', '$location', '$anchorScroll', function ($
     $location.hash('scroll-to-about');
     $anchorScroll();
     $location.hash(url);
+
+
 
     $scope.scrollToTop = function($var) {
         // 'html, body' denotes the html element, to go to any other custom element, use '#elementID'

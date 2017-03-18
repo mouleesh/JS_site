@@ -24,7 +24,7 @@
 		  <nav class="navbar navbar-fixed-top">
 		    <div class="container-fluid">
 		      <div class="navbar-header">
-				<button style="margin-top:20px;" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+				<button style="margin-top:20px;" type="button" class="navbar-toggle collapsed">
 				  <span class="sr-only">Toggle navigation</span>
 				  <span class="icon-bar"></span>
 				  <span class="icon-bar"></span>
@@ -143,23 +143,17 @@
 	</header>
 
 	<div class="page emptyDiv" style="width:100%" ng-view  ></div>
+	<button class="goToTop" ng-click="scrollToTop()" style="display:none;" ><i class="fa fa-arrow-circle-o-up" aria-hidden="true" style="font-size: 30px"></i>
+	</button>
 	<div ng-include src="'footer.html'"></div>
 
 <script>
 
 var $navbar = $('.navbar'),
     fixmeTop = $navbar.offset().top;
-$(window).scroll(function () {
-    var currentScroll = $(window).scrollTop();
-    if(currentScroll == fixmeTop){
-		$navbar.removeClass('fixed-black');
-		// $navbar.removeClass('fixed');
-    }
-    else{
-		// $navbar.addClass('fixed');
-		$navbar.addClass('fixed-black');
-    }
-});
+	$navbar.addClass('fixed-black');
+
+
 
 $(window).scroll(function() {
    var url    = $('.activeSmall').attr('id');
@@ -178,7 +172,6 @@ $(window).scroll(function() {
     if (url != "homeBtn") {
         scrTop < scrollPoint ? $(window).scrollTop(scrollPoint) : '';
 	}
-
 	if ($(this).scrollTop() > 100) {
 		$('.goToTop').fadeIn();
 	} else {
@@ -200,11 +193,6 @@ $(window).scroll(function() {
 //   		}
 //   }*/
 
-});
-
-$('.goToTop').click(function () {
-	$("html, body").animate({ scrollTop: 0 }, 1000);
-	return false;
 });
 
 </script>
@@ -380,6 +368,24 @@ $('.goToTop').click(function () {
 	}
 	.top-row{
 		padding-top: 170px;
+	}
+	.service-row{
+		padding-top: 170px;
+	}
+	.career-row{
+		padding-top: 260px;
+	}
+	#cover-image-text{
+		font-size: 40px;
+		padding-top: 50%;
+		height: 0%;
+	}
+	.career-cover-image {
+
+		width: 100%;
+		height: auto;
+		/*    -webkit-filter: blur(5px);
+            filter: blur(5px);*/
 	}
 
 }
